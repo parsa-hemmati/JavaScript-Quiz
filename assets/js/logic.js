@@ -43,3 +43,9 @@ function endQuiz() {
     document.getElementById("end-screen").classList.remove("hide")
     document.getElementById("score").innerHTML = "Your score: " + score;
 }
+
+document.getElementById("submit").addEventListener("click", function () {
+    let initials = document.getElementById("initials").value;
+    localStorage.setItem(initials, score);
+    console.log("Saved to local storage!")
+})
